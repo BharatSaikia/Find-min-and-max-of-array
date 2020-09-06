@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int fn(int arr[],int n)
+{
+    int max,min;
+    max = min = arr[0];
+    for(int i=0;i<=n;i++){
+        if(max < arr[i])
+            max = arr[i];
+        if(min > arr[i])
+            min = arr[i];
+    }
+    cout<<"max : "<<max<<"  and min : "<<min;
+
+}
+int main()
+{
+    int arr[] = {10,2,50,66,1};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    fn(arr,n);
+    return 0;
+}
